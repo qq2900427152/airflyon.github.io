@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flyon Tickets</title>
+    <link rel="stylesheet" href="./Flyon Tickets.css">
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.11.0/jquery-ui.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jqueryui-touch-punch/0.2.3/jquery.ui.touch-punch.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/moment.js/2.7.0/moment-with-langs.min.js"></script>
+    <script src="./jquery.rangecalendar.js"></script>
+    <link rel="stylesheet" href="./rangecalendar.css">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@600&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <header class="menu" style="position: fixed">
+        <div class="menubar">
+            <div class="imgbar">
+                <img class="logo" src="./img/logo.png" alt="logo" onclick="location.href = '../1_首頁/flyon.html'">
+            </div>
+            <div class="menubar4s">
+                <div class="selectBarbox" id="selectBarbox1">
+                    <h6 class="selectBarh6">1</h6>
+                    <h6 class="selectBar">Select</h6>
+                </div>
+                <div class="selectBarbox" id="selectBarbox2">
+                    <h6 class="selectBarh6">2</h6>
+                    <h6 class="selectBar">Guests</h6>
+                </div>
+                <div class="selectBarbox" id="selectBarbox3">
+                    <h6 class="selectBarh6">3</h6>
+                    <h6 class="selectBar">finalise</h6>
+                </div>
+            </div>
+            <div class="hiname">
+                <span class="hi">HI,</span>
+                <span class="name">LAN</span>
+                <span class="nameRa">L</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="price" id="priceboxtest">
+        <div class="Itineraryconfirm">
+            <div class="Itineraryconfirmtext">
+                <span class="ItineraryconfirmH3">One adults</span>
+                <span class="ItineraryconfirmH5"> 從</span>
+                <span class="ItineraryconfirmH3"> 臺灣 </span>
+                <span class="ItineraryconfirmH5">到</span>
+                <span class="ItineraryconfirmH3"> 南韓 </span>
+                <span class="ItineraryconfirmH5">, 出發日期</span>
+                <span class="ItineraryconfirmH3"> Saturday, 24 September</span>
+                <span class="ItineraryconfirmH5"> , 回程日期 </span>
+                <span class="ItineraryconfirmH3">Friday, 07 October.</span>
+            </div>
+        </div>
+        <div class="pricebox">
+            <div class="priceboxdiv" id="pricebox">
+                <span class="pricebox1">BOOKING TOTAL</span>
+                <span class="pricebox2">
+                    <span class="pricebox2span1">$</span>
+                    <span class="pricebox2span2" id="pricebox2span">00,000</span>
+                    <span class="pricebox2span3">.00</span>
+                    <span class="pricebox2span4">TWD</span>
+                </span>
+            </div>
+            <img src="https://img.icons8.com/sf-regular-filled/48/737373/shopping-cart.png" />
+        </div>
+
+    </div>
+    <!-- 去程 -->
+    <div class="content">
+        <div class="contentbox" id="contentboxTop">
+            <div class="contentboxtext">
+                <h2 class="contentboxtextH2">選擇您的航班</h2>
+                <h3 class="contentboxtextH3">您想要哪個出發航班？</h3>
+            </div>
+        </div>
+        <div class="selectdate" id="selectdate1">
+            <div id="rangeCalendar"></div>
+            <div class="selectdate7day">
+                <div class="Previous7days">Previous 7 days</div>
+                <div class="Next7days">Next 7 days</div>
+            </div>
+            <div class="currencyorpoint">
+                <div class="currencyorpointbox">
+                    <div class="currency">貨 幣</div>
+                    <div class="point">點 數</div>
+                </div>
+            </div>
+            <div class="sortby">
+                <div class="sortbybox">
+                    <span class="sortbysmail">Sort by: <span class="sortbybig">Price</span></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contentPrice" id="contentPrice1">
+        <div class="contentPricebox" id="contentPricebox1">
+            <div class="contentPriceboxleft">
+                <div class="contentPriceboxleft-1">
+                    <div class="cpcbleftbox">
+                        <span class="origin1">
+                            <span class="hour">2 hr 00 min · 直飛</span>
+                            <span class="code">TPA</span>
+                            <span class="origintime">11:00 am</span>
+                            <div class="ball"></div>
+                        </span>
+                        <span class="origin2">
+                            <div class="ball"></div>
+                            <span class="origintime">13:00 pm</span>
+                            <span class="code">KOR</span>
+                        </span>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="contentPriceboxleft-2">
+                    <span class="flynumber-1">KT501</span>
+                    <span> · Boeing 737-800</span>
+                    <span> · Flyon Taiwan Airlines</span>
+                </div>
+            </div>
+
+            <div class="contentPriceboxright">
+                <div class="frombox">
+                    <div class="fromtext">票價</div>
+                    <div class="fromPrice">$ 10,000</div>
+                </div>
+                <div class="leftatthisprice">
+                    <span>此價格僅剩兩個座位</span>
+                    <img src="https://img.icons8.com/color/48/000000/fire-element--v1.png" />
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="contentPrice" id="contentPrice2" style="display: none;">
+        <div class="contentPricebox">
+            <div class="contentPriceboxIcon"><img src="https://img.icons8.com/metro/52/FFFFFF/checkmark.png" /></div>
+            <div class="contentPriceboxleft">
+                <div class="contentPriceboxleft-1">
+                    <div class="contentPriceboxlefttop">出發時間 Friday, 24 September</div>
+                    <div class="cpcbleftbox">
+                        <span class="origin1">
+                            <span class="hour">2 hr 00 min · 直飛</span>
+                            <span class="code">TPA</span>
+                            <span class="origintime">11:00 am</span>
+                            <div class="ball2"></div>
+                        </span>
+                        <span class="origin2">
+                            <div class="ball2"></div>
+                            <span class="origintime">13:00 pm</span>
+                            <span class="code">KOR</span>
+                        </span>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="contentPriceboxleft-2">
+                    <span class="flynumber-1">KT501</span>
+                    <span> · Boeing 737-800</span>
+                    <span> · Flyon Taiwan Airlines</span>
+                </div>
+            </div>
+
+            <div class="contentPriceboxright">
+                <div class="frombox1">
+                    <div class="ctpbrightBtn" id="ctpbrightBtn1">Change</div>
+                    <div class="fromtextbox">
+                        <div class="fromtext1">經濟艙</div>
+                        <div class="fromPrice">$ 10,000</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="back" id="back" style="display: none;">
+        <!-- 回程 -->
+        <div class="content">
+            <div class="contentbox" id="contentboxtextH2H3" style="display: none;">
+                <div class="contentboxtext">
+                    <h2 class="contentboxtextH2">選擇您的航班</h2>
+                    <h3 class="contentboxtextH3">您想要哪個回來航班？</h3>
+                </div>
+            </div>
+            <div class="selectdate" id="selectdate2">
+                <div id="rangeCalendar2"></div>
+                <div class="selectdate7day">
+                    <div class="Previous7days">Previous 7 days</div>
+                    <div class="Next7days">Next 7 days</div>
+                </div>
+                <div style="visibility: hidden;" class="currencyorpoint">
+                    <div class="currencyorpointbox">
+                        <div class="currency">貨 幣</div>
+                        <div class="point">點 數</div>
+                    </div>
+                </div>
+                <div class="sortby">
+                    <div class="sortbybox">
+                        <span class="sortbysmail">Sort by: <span class="sortbybig">Price</span></span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="contentPrice" id="contentPrice3">
+            <div class="contentPricebox" id="contentPricebox2">
+                <div class="contentPriceboxleft">
+                    <div class="contentPriceboxleft-1">
+                        <div class="cpcbleftbox">
+                            <span class="origin1">
+                                <span class="hour">2 hr 00 min · 直飛</span>
+                                <span class="code">KOR</span>
+                                <span class="origintime">11:00 am</span>
+                                <div class="ball"></div>
+                            </span>
+                            <span class="origin2">
+                                <div class="ball"></div>
+                                <span class="origintime">13:00 pm</span>
+                                <span class="code">TPA</span>
+                            </span>
+                            <span class="arrow"></span>
+                        </div>
+                    </div>
+                    <div class="contentPriceboxleft-2">
+                        <span class="flynumber-1">KT502</span>
+                        <span> · Boeing 737-800</span>
+                        <span> · Flyon Taiwan Airlines</span>
+                    </div>
+                </div>
+
+                <div class="contentPriceboxright">
+                    <div class="frombox">
+                        <div class="fromtext">票價</div>
+                        <div class="fromPrice">$ 10,000</div>
+                    </div>
+                    <div class="leftatthisprice">
+                        <span>此價格僅剩三個座位</span>
+                        <img src="https://img.icons8.com/color/48/000000/fire-element--v1.png" />
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="contentPrice" id="contentPrice4" style="display: none;">
+        <div class="contentPricebox">
+            <div class="contentPriceboxIcon"><img src="https://img.icons8.com/metro/52/FFFFFF/checkmark.png" />
+            </div>
+            <div class="contentPriceboxleft">
+                <div class="contentPriceboxleft-1">
+                    <div class="contentPriceboxlefttop">回程時間 Friday, 07 October</div>
+                    <div class="cpcbleftbox">
+                        <span class="origin1">
+                            <span class="hour">2 hr 00 min · 直飛</span>
+                            <span class="code">KOR</span>
+                            <span class="origintime">11:00 am</span>
+                            <div class="ball2"></div>
+                        </span>
+                        <span class="origin2">
+                            <div class="ball2"></div>
+                            <span class="origintime">13:00 pm</span>
+                            <span class="code">TPA</span>
+                        </span>
+                        <span class="arrow"></span>
+                    </div>
+                </div>
+                <div class="contentPriceboxleft-2">
+                    <span class="flynumber-1">KT502</span>
+                    <span> · Boeing 737-800</span>
+                    <span> · Flyon Taiwan Airlines</span>
+                </div>
+            </div>
+
+            <div class="contentPriceboxright">
+                <div class="frombox1">
+                    <div class="ctpbrightBtn" id="ctpbrightBtn2">Change</div>
+                    <div class="fromtextbox">
+                        <div class="fromtext1">經濟艙</div>
+                        <div class="fromPrice">$ 10,000</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="guests" id="guests" style="display: none;">
+        <div class="guestsbox">
+            <div class="contentboxtext">
+                <h2 class="contentboxtextH2">誰會去旅行？</h2>
+            </div>
+
+            <div class="guestsboxTop">
+                <div class="guestsboxTopbox">
+                    <div class="guestsboxTopname">
+                        <div class="guestsboxTopnameLeft">
+                            <div class="gbtLeft1">L</div>
+                            <div class="guestsboxTopnameMid">
+                                <div class="gbttMid1">LAN KAIMAO</div>
+                                <div class="gbttMid2">Red Card飛昂成員：kaimaolan@gmail.com</div>
+                            </div>
+                        </div>
+                        <div class="guestsboxTopnameRight">
+                            <span>成人</span>
+                        </div>
+                    </div>
+                    <div class="gbtNamedown">
+                        <span class="gbtNamedownSpan1">正確的客人詳細信息</span>
+                        <span class="gbtNamedownSpan2">對於確保我們能夠在登機或是航班中斷時與您聯繫非常重要,您的姓名應與您再辦理登機手續時使用的身分證件相符。</span>
+                    </div>
+                    <div class="guestsboxTopcontent">
+                        <div class="gbttselect">
+                            <div class="gbttselectbox">
+                                <span>Title</span>
+                                <select>
+                                    <option value="Mr." selected>Mr.</option>
+                                    <option value="Mr.">Ms.</option>
+                                    <option value="Mr.">Mrs.</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="gbttFirstname">
+                            <div class="gbttFirstnamebox">
+                                <span>First name</span>
+                                <input type="text" value="LAN">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guestsboxTopcontent-2">
+                        <div class="gbttmidname">
+                            <div class="gbttmidnamebox">
+                                <input type="text" value="Middle name (選填)">
+                            </div>
+                        </div>
+                        <div class="gbttLastname">
+                            <div class="gbttLastnamebox">
+                                <span>Last name</span>
+                                <input type="text" value="KAIMAO">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="guestsboxTopcontent-3">
+                        <div class="gbttselect-3name">
+                            <div class="gbttselectbox">
+                                <span>Gender</span>
+                                <select>
+                                    <option value="Male" selected>Male</option>
+                                    <option value="Female">Female</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="guestsboxTopcontact">
+                    <div class="gbtcontactbox">
+                        <img src="https://img.icons8.com/ios-filled/50/512698/phone.png" />
+                        <span>聯繫方式</span>
+                    </div>
+                </div>
+                <div class="guestsboxTopcontent-2">
+                    <div class="gbttmidname">
+                        <div class="gbttLastnamebox">
+                            <span>Phone number</span>
+                            <input type="text" value="0912059420">
+                        </div>
+                    </div>
+                    <div class="gbttLastname">
+                        <div class="gbttLastnamebox">
+                            <span>Email address</span>
+                            <input type="text" value="kaimaolan@gmail.com">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="guestsboxDown">
+            <div class="guestsboxDownbox">
+                <div class="guestsboxDownboxTop">
+                    <div class="gbdboxtopLeft">
+                        <span class="gbdboxtopLeftSpan1">想快速得到航班特價及促銷以即刻享受！</span>
+                        <div class="gbdboxtopLeftcheckbox">
+                            <input type="checkbox"><span
+                                class="gbdboxtopLeftSpan2">是的！我希望收到flyon集團提供的更新、特別優惠和其他資訊。</span>
+                        </div>
+                    </div>
+                    <div class="gbdboxtopRight">
+                        <img src="https://img.icons8.com/sf-regular-filled/96/512698/new-post.png" />
+                    </div>
+                </div>
+            </div>
+            <div class="guestsboxDownboxDown">
+                <div class="guestsboxDownboxDownbox">
+                    <span> 飛昂 (Flyon) 將使用您的資料提供個人化與改善您的 Flyon 體驗，並向您寄送 Flyon point
+                        相關資訊。您可以隨時變更您的通訊喜好。我們可能會根據隱私權政策和補充隱私權政策使用您的資料，包括與 Walt Flyon
+                        集團分享。</span>
+                </div>
+            </div>
+            <div class="gbdbDown2">
+                <span>點擊「繼續」，即表示您同意訂閱協議、隱私權政策以及補充隱私權政策。</span>
+            </div>
+            <div class="guestsboxBtn">
+                <div class="guestsboxBtnbox">
+                    <div class="guestsboxBtn1" id="guestsboxBtn1-1">繼續</div>
+                    <div class="guestsboxBtn2">返回</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pay" id="pay" style="display: none;">
+        <div class="paybox">
+            <div class="payboxtop">
+                <div class="payboxtoph3">選擇哪一種支付方式？</div>
+                <div class="payboxtoppay">
+                    <div class="payboxtoppay-2"><input type="radio" name="pay" checked><span>信用卡</span>
+                        <span id="payboxtoppaySpan2">+11 TWD 手續費</span>
+                    </div>
+                    <div class="payboxtoppay-1"><input type="radio" name="pay"><span>便利商店(7-11/全家)</span></div>
+                </div>
+                <div class="payboxtoppay">
+                    <div class="payboxtoppay-1"><input type="radio" name="pay"><span>ATM</span></div>
+                    <div class="payboxtoppay-1"><input type="radio" name="pay"><span>網路銀行</span></div>
+                </div>
+            </div>
+            <div class="payboxmid">
+                <div class="payboxmid1">用信用卡支付</div>
+                <div class="payboxmid2">
+                    <img src="https://img.icons8.com/arcade/100/000000/experimental-visa-arcade.png" />
+                    <img src="https://img.icons8.com/arcade/100/000000/experimental-mastercard-arcade.png" />
+                </div>
+                <div class="payboxmid3">將收取額外費用。($11已添加到您的預訂總額中）</div>
+            </div>
+            <div class="payboxdown">
+                <div class="payboxdownTop">輸入您的信用卡詳細信息</div>
+                <div class="payboxdownDown">
+                    <div class="payboxdownDownbox-1">
+                        <div class="payboxdownDownbox2">
+                            <span>卡號</span>
+                            <input type="text">
+                        </div>
+                        <div class="payboxdownDownbox3">
+                            <span>姓名</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="payboxdownDownbox-1">
+                        <div class="payboxdownDownbox1">
+                            <span>到期日期</span>
+                            <input type="text">
+                        </div>
+                        <div class="payboxdownDownbox1">
+                            <span>安全碼</span>
+                            <input type="text">
+                        </div>
+                    </div>
+                    <div class="payboxdownDownbox-2">
+                        <div class="payboxdowncheckbox">
+                            <input type="checkbox"><span>勾選保存此卡片以供將來預定使用</span>
+                        </div>
+                        <span>有關如何處理您的個人信息的詳細信息，請參閱我們的隱私政策。</span>
+                    </div>
+                    <div class="payboxBtnbox">
+                        <div class="payboxBtn1" id="payboxBtn1">完成支付</div>
+                        <div class="payboxBtn2">返回</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footerbox">
+            <div class="footboxleft">
+                <div class="footboxleft1">
+                    <img style="width: 16px;height:17px" src="https://img.icons8.com/android/48/737373/home.png" />
+                    <span>Home</span>
+                </div>
+                <div class="footboxleft2">
+                    <img src="https://img.icons8.com/sf-regular/48/737373/topic.png" />
+                    <span>Contact</span>
+                </div>
+            </div>
+            <div class="footerright">
+                <div class="footerrightboxUp">
+                    <span class="footerrightboxUp1">顯示票價免責聲明</span>
+                    <span class="footerrightboxUp2">使用條款</span>
+                    <span class="footerrightboxUp2">隱私</span>
+                    <span class="footerrightboxUp3">運輸條件</span>
+                </div>
+                <span class="footerrightboxDown">© Copyright 2022. FlyOn Airlines Co. Ltd. All rights reserved</span>
+            </div>
+        </div>
+    </footer>
+
+    <script src="./Flyon Tickets.js"></script>
+</body>
+
+</html>
